@@ -16,16 +16,21 @@ setup for ir_send.ino
 
 ### input data format
 
-* L sends leader.
-* T sends trailer.
-* [0-9a-fA-F] sends 4bit signal. LSB will be sent first. So if you want to send a byte `e1` you type `1e` and it will be 10000111.
+* `Xtnnn` set format. `t = [NAS]` NEC, AEHA, SONY respectively. nnn=duration for each bit(known as `T`) in microseconds (`t=A` only).
+* `L` sends leader.
+* `T` sends trailer.
+* `[0-9a-fA-F]` sends 4bit signal. LSB will be sent first. So if you want to send a byte `e1` you type `1e` and it will be 10000111.
 
 
 ### samples
 
 turn on cooler 26 degree
 ```
-L 10 01 0 0 04 fb ff 00 cc 33 0a f5 31 ce 86 79 00 ff 00 ff 00 ff 00 ff 00 ff 35 ca 1f e0 00 ff 00 ff 00 ff 90 6f T
+XA425 L 10 01 0 0 04 fb ff 00 cc 33 0a f5 31 ce 86 79 00 ff 00 ff 00 ff 00 ff 00 ff 35 ca 1f e0 00 ff 00 ff 00 ff 90 6f T Z
 ```
+turn off
+'''
+XA425 L 10 01 0 0 04 fb ff 00 cc 33 0a f5 31 ce 86 79 00 ff 00 ff 00 ff 00 ff 00 ff 35 ca 1e e1 00 ff 00 ff 00 ff 90 6f T Z
+'''
 
 
