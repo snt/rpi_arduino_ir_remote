@@ -24,13 +24,16 @@ setup for ir_send.ino
 
 ### samples
 
-turn on cooler 26 degree
+* turn on cooler 26 degree
+
 ```
 XA425 L 10 01 0 0 04 fb ff 00 cc 33 0a f5 31 ce 86 79 00 ff 00 ff 00 ff 00 ff 00 ff 35 ca 1f e0 00 ff 00 ff 00 ff 90 6f T Z
 ```
-turn off
-'''
+
+* turn off
+
+```
 XA425 L 10 01 0 0 04 fb ff 00 cc 33 0a f5 31 ce 86 79 00 ff 00 ff 00 ff 00 ff 00 ff 35 ca 1e e1 00 ff 00 ff 00 ff 90 6f T Z
-'''
+```
 
 
