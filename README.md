@@ -14,13 +14,14 @@ setup for ir_send.ino
 * type following samples.
 
 
-### input data format
+### input data command format
 
 * `Xtnnn` set format. `t = [NAS]` NEC, AEHA, SONY respectively. nnn=duration for each bit(known as `T`) in microseconds (`t=A` only).
 * `L` queues a leader to send.
 * `T` queues a  trailer to send.
 * `[0-9a-fA-F]` queues a 4bit signal to send. LSB will be sent first. So if you want to send a byte `e1` you type `1e` and it will be 10000111.
 * `Z` to send queued items.
+* spaces and returns between commands are ignored.
 
 
 ### samples
